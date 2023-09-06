@@ -8,7 +8,11 @@ const Api =async ()=>{
   //API Endpoint
   app.get('/api/data',async(req, res) => {
     try {
-      const data = await Insights.find();
+      const currentDate = new Date();
+      const data = await Insights.find({
+        startDate:{ $lte: currentDate },
+        endDate: {$gte: currentDate},
+      });
       res.json(data);
     } catch (error) {
       console.error(error);

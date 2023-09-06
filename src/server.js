@@ -19,7 +19,7 @@ const run =async ()=>{
   app.use(admin.options.rootPath, router);
   
     app.listen(port, () => {
-        console.log(`Example app listening on port ${port}`)
+        console.log(`Admin panel listening on port ${port}`)
       })
 }
 module.exports = run;
