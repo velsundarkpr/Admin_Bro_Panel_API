@@ -6,4 +6,4 @@ const buildAdminRouter = (admin) => {
     const router = buildRouter(admin);
     return router;
 };
-module.exports = buildAdminRouter
+module.exports = buildAdminRouter;
